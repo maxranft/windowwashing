@@ -197,24 +197,29 @@
         <h1>Contact Us</h1>
         <p>Get a quote today!</p>
         <div class="container-fluid quote-form">
-            <form>
+            <form method="post" name="contactform" action="email.php">
                 <div class="form-group">
                     <label for="customerName">Name</label>
-                    <input type="input" class="form-control" id="emailName" placeholder="Enter Name">
+                    <input type="input" class="form-control" id="emailName" placeholder="Enter Name" name="name">
                 </div>
                 <div class="form-group">
                     <label for="customerEmail">Email address</label>
-                    <input type="email" class="form-control" id="emailAdress" aria-describedby="emailHelp" placeholder="Enter email">
-                  </div>
+                    <input type="email" class="form-control" id="emailAdress" aria-describedby="emailHelp" placeholder="Enter Email" name="email">
+                </div>
                 <div class="form-group">
                     <label for="customerName">Phone Number</label>
-                    <input type="input" class="form-control" id="emailName" placeholder="Enter Phone #">
-                  </div>
+                    <input type="tel" class="form-control" id="emailName" placeholder="Enter Phone #" name="phone">
+                </div>
                 <div class="form-group">
                     <label for="customerName">How can we help you?</label>
-                    <textarea class="form-control" id="emailBody" rows="3"></textarea>
-                  </div>
-                <button type="submit" class="btn w-100 submitbtn">Submit</button>
+                    <textarea class="form-control" id="emailBody" rows="3" name="message"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn w-100 submitbtn">Submit</button>
+                    <div class="success">
+                        <strong>Success</strong>
+                    </div>
+                </div>
               </form>
         </div>
     </section>

@@ -378,6 +378,16 @@ body {
     }
 } 
 
+.form-control {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.form-control:focus {
+    background-color: lightgray;
+}
+
 #Quote .form-group {
     padding: 2% 0;
 }
@@ -398,6 +408,17 @@ body {
 .submitbtn:hover {
     background-color: #604e75;
 }
+
+.success {
+    text-align: center;
+    background-color: rgb(118, 150, 69);
+    margin: 0 15%;
+    color: black;
+    border-radius: 20px;
+    visibility: hidden;
+}
+
+
 
 /* Footer */
 
