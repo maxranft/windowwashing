@@ -1,4 +1,7 @@
 # Luxury
 Website for Luxury Window Washing
 
-https://ryanjohnsondev.github.io/Luxury/
+https://www.luxurywindowwashing.com/
+or
+https://luxuryww.netlify.app/
+
