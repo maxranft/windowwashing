@@ -1,7 +1,7 @@
 # Luxury
 Website for Luxury Window Washing
 
-https://www.luxurywindowwashing.com/ \n
-or \n
+https://www.luxurywindowwashing.com/  
+or  
 https://luxuryww.netlify.app/
 
