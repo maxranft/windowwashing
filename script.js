@@ -1,5 +1,6 @@
 const successMsg = document.getElementById("success");
 const nameBox = document.getElementById("emailName");
+const zipBox = document.getElementById("emailZip");
 const emailBox = document.getElementById("emailAddress");
 const phoneBox = document.getElementById("emailPhone");
 const bodyBox = document.getElementById("emailBody");
@@ -43,6 +44,7 @@ overlay.addEventListener("click", modalClose);
 function show() {
   if (
     nameBox.value === "" ||
+    zipBox.value === "" ||
     emailBox.value === "" ||
     phoneBox.value === "" ||
     bodyBox.value === ""
@@ -53,28 +55,22 @@ function show() {
     setTimeout(function () {
       successMsg.style.display = "none";
     }, 5000);
-  } else {
-    // notiText.textContent = `Submission Successful`;
-    // successMsg.style.backgroundColor = "Chartreuse";
-    // successMsg.style.display = "block";
-    // setTimeout(function () {
-    //   successMsg.style.display = "none";
-    // }, 5000);
   }
 }
 
 const handleSubmit = (event) => {
   event.preventDefault();
-  console.log("Form submission start");
   subject.value = `Luxury Window Washing // Form Submission From ${nameBox.value}`;
   const myForm = event.target;
   const formData = new FormData(myForm);
   if (
     nameBox.value !== "" &&
+    zipBox.value !== "" &&
     emailBox.value !== "" &&
     phoneBox.value !== "" &&
     bodyBox.value !== ""
   ) {
+    console.log(new URLSearchParams(formData).toString());
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -87,6 +83,7 @@ const handleSubmit = (event) => {
         successMsg.style.backgroundColor = "Chartreuse";
         successMsg.style.display = "block";
         nameBox.value = "";
+        zipBox.value = "";
         emailBox.value = "";
         phoneBox.value = "";
         bodyBox.value = "";

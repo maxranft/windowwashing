@@ -65,19 +65,21 @@ body {
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50px;
-  width: 700px;
+  width: 810px;
   margin: 100px auto;
   padding: 40px 0;
 }
 
-.banner {
-  padding: 40px 0;
+#Title .container {
+  margin: fit-content;
+  max-width: 991px;
+  padding: 0;
 }
 
 .colortext {
   font-family: "Nickainley", sans-serif;
   font-size: 4.5rem;
-  color: #5f9bce;
+  color: #2a689e;
   font-weight: 400;
 }
 
@@ -100,7 +102,7 @@ body {
 }
 
 .subtext {
-  width: auto;
+  width: 380px;
   font-size: 24px;
   line-height: 2;
   margin-left: 3%;
@@ -173,6 +175,9 @@ body {
   .photos img {
     width: 40%;
   }
+  #Title .container {
+    margin: calc(auto / 4);
+  }
 }
 
 @media (min-width: 991px) and (max-width: 1920px) {
@@ -183,7 +188,7 @@ body {
     padding: 0 10%;
   }
   .photos img {
-    width: 65%;
+    width: 300px;
   }
 }
 
@@ -195,7 +200,7 @@ body {
     padding: 0 10%;
   }
   .photos img {
-    width: 65%;
+    width: 300px;
   }
 }
 
@@ -364,6 +369,10 @@ body {
   }
   #Testimonials {
     height: auto;
+  }
+  #Title .banner {
+    
+
   }
 }
 @media (max-width: 670px) {
